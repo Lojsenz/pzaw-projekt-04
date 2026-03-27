@@ -6,7 +6,7 @@ Prosta aplikacja do zarządzania notatkami z logowaniem użytkowników.
 
 ### 1. Zainstaluj Node.js
 
-Pobierz i zainstaluj Node.js ze strony https://nodejs.org (wersja 18 lub nowsza).
+Pobierz i zainstaluj Node.js ze strony https://nodejs.org 
 
 ### 2. Zainstaluj zależności
 
@@ -22,13 +22,19 @@ Utwórz plik `.env` w głównym folderze projektu:
 PORT=8000 - ustawienie protu na ktorym chcemy hostowac aplikacje
 ADMIN_LOGIN=admin - ustawienie nazwy administratora 
 ADMIN_PASS=admin - ustawienie hasla administratora
-SESSION_SECRET=twoj_tajny_klucz
+SESSION_SECRET=twoj_tajny_klucz - ustawienie klucza do szyfrowania sesji
 ```
 
 ### 4. Uruchom aplikację
 
 ```bash
-node index.js
+node index.js 
 ```
 
-Aplikacja będzie dostępna pod adresem `http://localhost:8000`
+lub 
+
+```bash
+npm start
+```
+
+Aplikacja uruchomi sie pod adresem `http://localhost:8000`
