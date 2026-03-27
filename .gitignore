@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+
+
+# Database
+database.db
+*.db-shm
+*.db-wal
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# VSCode
+.vscode/
+
+# Prettier
+.prettierrc
+.prettierignore
+
+# ESLint
+eslint.config.js
+
+# Docker
+Dockerfile
+.dockerignore
+compose.yaml
+compose.debug.yaml

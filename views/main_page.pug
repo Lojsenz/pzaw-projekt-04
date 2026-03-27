@@ -1,0 +1,17 @@
+extends tailwind.pug
+
+block title
+  title Dashboard
+
+block content
+  div(class="max-w-2xl mx-auto px-4 py-16")
+    div(class="bg-white rounded-2xl shadow-sm p-8")
+      div(class="mb-8")
+        h1(class="text-3xl font-bold text-gray-800 mb-2") Welcome, #{user}
+        if isadmin
+          span(class="inline-block text-xs font-semibold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full") Admin
+        else
+          span(class="inline-block text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full") User
+      a(href="/main_page/notes" class="block w-full bg-blue-600 text-white text-center py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors") View Notes
+      a(href="/logout" class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-medium hover:bg-red-700 transition-colors mt-3") Logout
+    

@@ -1,0 +1,17 @@
+extends tailwind.pug
+
+block title
+  title Add Note
+
+block content
+  div(class="max-w-2xl mx-auto px-4 py-12")
+    div(class="bg-white rounded-2xl shadow-sm p-8")
+      h1(class="text-2xl font-bold text-gray-800 mb-6") New Note
+      form(action="/add_note" method="POST")
+        div(class="mb-4")
+          label(for="title" class="block text-sm font-medium text-gray-700 mb-1") Title
+          input#title(type="text" name="Title" required placeholder="Note title..." class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500")
+        div(class="mb-6")
+          label(for="note" class="block text-sm font-medium text-gray-700 mb-1") Content
+          textarea#note(name="Note" rows="8" required placeholder="Write your note here..." class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none")
+        button(type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors") Save Note

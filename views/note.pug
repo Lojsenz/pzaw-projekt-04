@@ -1,0 +1,12 @@
+extends tailwind.pug
+
+block title
+  title #{note.Title}
+
+block content
+  div(class="max-w-2xl mx-auto px-4 py-12")
+    div(class="bg-white rounded-2xl shadow-sm p-8")
+      h1(class="text-3xl font-bold text-gray-800 mb-6") #{note.Title}
+      p(class="text-gray-600 leading-relaxed whitespace-pre-wrap") #{note.Note}
+    a(href="/main_page/notes" class="inline-block mt-6 text-sm text-gray-500 hover:text-gray-700") ← Back to notes
+    a(href="/main_page/notes/" + note.id + "/delete" class="inline-block mt-6 ml-4 text-sm text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg") Delete note

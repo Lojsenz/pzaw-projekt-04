@@ -1,0 +1,17 @@
+extends tailwind.pug
+
+block title
+  title Notes
+
+block content
+  div(class="max-w-2xl mx-auto px-4 py-12")
+    div(class="flex items-center justify-between mb-6")
+      h1(class="text-3xl font-bold text-gray-800") Your Notes
+      a(href="/main_page/add_note" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm") + New Note
+    ul(class="space-y-3")
+      each note in notes
+        li
+          a(href=`/main_page/notes/${note.id}` class="block bg-white rounded-xl shadow-sm px-5 py-4 font-medium text-gray-800 hover:shadow-md hover:text-blue-600 transition-all") #{note.Title}
+      else
+        p(class="text-center text-gray-400 py-12 bg-white rounded-xl") No notes yet. Create your first one!
+    a(href="/main_page" class="inline-block mt-6 text-sm text-gray-500 hover:text-gray-700") ← Back to dashboard
